@@ -19,9 +19,9 @@
 * Finetune the trained model with images of original large spatial resolution by running ```CUDA_VISIBLE_DEVICES=0,1 python finetuning.py```
 ### To test:
 * Prepare test data (one of the two ways):
-    * Put the test images in `./test_data/images/` **or** 
+    * Put the test images in `./test_data/images/` ***or*** 
     * Put the test data (including images and **landmark**) in `./test_data/LM/` in `.mat` format <br> 
-* Run ```CUDA_VISIBLE_DEVICES=0 python test.py``` **or** run ```CUDA_VISIBLE_DEVICES=0,1 python test_w_finetuning.py``` 
+* Run ```CUDA_VISIBLE_DEVICES=0 python test.py``` ***or*** run ```CUDA_VISIBLE_DEVICES=0,1 python test_w_finetuning.py``` 
 
 ## Task #3: Fine registration and fusion
 ### To train:
