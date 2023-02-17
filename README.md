@@ -12,7 +12,7 @@
 
 ## Task #2: Multi-scale coarse registration
 ### To train:
-* Download the training data [RGB-IR], [RGB-NIR], [PET-MRI], [CT-MRI] or create your training dataset.
+* Download the training data [RGB-IR], [RGB-NIR](https://pan.baidu.com/s/1P24HU1vDbDxcDZmM8b_ruA?pwd=ry6r), [PET-MRI], [CT-MRI] or create your training dataset.
 * Adjust `task1_model_path` in `main.py` to the path where you store the model in task #1.
 * Run ```CUDA_VISIBLE_DEVICES=0,1 python main.py```
 * Put some training images of large spatial resolution in `./large_images_for_training/`
