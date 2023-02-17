@@ -15,7 +15,7 @@ data2_path = 'qikan_aligned_RGB_NIR_part2.h5'
 
 patch_size = 256
 
-EPOCHES = 60
+EPOCHES = 50
 
 NUM=3
 
