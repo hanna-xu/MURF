@@ -10,8 +10,8 @@ from scipy.io import loadmat
 from train import train_descriptor
 from des_extract_model import Des_Extract_Model
 
-data1_path = 'qikan_aligned_RGB_NIR_part1.h5'
-data2_path = 'qikan_aligned_RGB_NIR_part2.h5'
+data1_path = 'RGB_NIR_part1.h5'
+data2_path = 'RGB_NIR_part2.h5'
 
 patch_size = 256
 
