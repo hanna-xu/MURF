@@ -8,7 +8,7 @@
 * Run ```CUDA_VISIBLE_DEVICES=0 python main.py```
 ### To test:
 * Put the test data in **./test_imgs/**<br>
-* Run```CUDA_VISIBLE_DEVICES=0 python test.py```<br>
+* Run ```CUDA_VISIBLE_DEVICES=0 python test.py```<br>
 
 ## Task #2: Multi-scale coarse registration
 ### To train:
