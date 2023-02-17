@@ -12,6 +12,9 @@
 
 ## Task #2: Multi-scale coarse registration
 ### To train:
+* Download the training data [RGB-IR], [RGB-NIR], [PET-MRI], [CT-MRI] or create your training dataset.
+* Adjust ```task1_model_path``` in ```main.py``` to the path where you store the model in task #1.
+* Run ```CUDA_VISIBLE_DEVICES=0,1 python main.py```
 ### To test:
 
 ## Task #3: Fine registration and fusion
