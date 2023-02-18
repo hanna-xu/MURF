@@ -12,7 +12,7 @@ from affine_model import Affine_Model
 
 data1_path = 'large_misalignment_part1.h5'
 data2_path = 'large_misalignment_part2.h5'
-task1_model_path = '../task1_shared_information_extraction/models/'
+task1_model_path = '../shared_information_extraction/models/'
 
 patch_size = 256
 EPOCHES = 100
