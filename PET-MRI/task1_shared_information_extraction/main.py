@@ -44,5 +44,6 @@ def main():
 		train_descriptor(model=model, sess=sess, trainset=source_data, merged1=merge_summary1, writer=writer1, saver=saver,
 							save_path='./models/', EPOCHES=EPOCHES)
 
+		
 if __name__ == '__main__':
 	main()
