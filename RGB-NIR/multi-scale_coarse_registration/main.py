@@ -34,11 +34,9 @@ def main():
 		w_RGB = tf.compat.v1.summary.image('warped_RGB', model.warped_RGB, max_outputs=NUM)
 		w_des1 = tf.compat.v1.summary.image('w_des_RGB', model.w_des1, max_outputs=NUM)
 		w_des2 = tf.compat.v1.summary.image('w_des_NIR', model.w_des2, max_outputs=NUM)
-		diff1 = tf.compat.v1.summary.image('diff_ori', model.diff_ori, max_outputs=NUM)
-		diff2 = tf.compat.v1.summary.image('diff_after', model.diff_after, max_outputs=NUM)
 		label = tf.compat.v1.summary.image('label', model.label, max_outputs=NUM)
 		merge_summary1 = tf.compat.v1.summary.merge(
-			[SOURCE1, SOURCE2, gloss1, gloss2, w_RGB, w_des1, w_des2, diff1, diff2, label, aloss])
+			[SOURCE1, SOURCE2, gloss1, gloss2, w_RGB, w_des1, w_des2, label, aloss])
 
 		print('Begin to train the network...\n')
 		with tf.device('/cpu:0'):
