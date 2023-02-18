@@ -36,9 +36,8 @@ def main():
 		WSOURCE1, label, _ = apply_affine_trans(SOURCE_RGB_N, affine_model.dtheta)
 		WSOURCE1 = tf.multiply(WSOURCE1, tf.tile(label, [1, 1, 1, 3]))
 
-		# var_list_des = tf.contrib.framework.get_trainable_variables(scope='des_extract')
 		var_list_affine = tf.contrib.framework.get_trainable_variables(scope='affine_net')
-		var_list = var_list_affine # + var_list_des
+		var_list = var_list_affine
 
 		saver = tf.compat.v1.train.Saver(var_list=var_list)
 		global_vars = tf.compat.v1.global_variables()
