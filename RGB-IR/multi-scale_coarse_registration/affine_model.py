@@ -58,9 +58,6 @@ class Affine_Model(object):
 			self.warped_RGB, self.label, self.resampling_grid = apply_affine_trans(self.RGB, self.dtheta)
 			self.warped_RGB = tf.multiply(self.warped_RGB, tf.tile(self.label, [1, 1, 1, 3]))
 
-			# self.fuse_before = (self.RGB + tf.tile(self.IR, [1, 1, 1, 3]))/2
-			# self.fuse_after = (self.warped_RGB + tf.tile(self.IR, [1, 1, 1, 3]))/2
-
 		if self.is_training:
 			with tf.device('/gpu:1'):
 				self.extract_model = Des_Extract_Model(self.batchsize, self.INPUT_H, self.INPUT_W, is_training=False, equivariance=False)
