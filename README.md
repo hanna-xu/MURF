@@ -11,6 +11,9 @@
 * Run ```CUDA_VISIBLE_DEVICES=0 python test.py```<br>
 
 ## Task #2: Multi-scale coarse registration
+<div align=center><img src="https://github.com/hanna-xu/others/blob/master/images/MCRM_show.png" width="1100" height="350"/></div>
+
+
 ### To train:
 * Download the training data [RGB-IR](https://pan.baidu.com/s/1fgHRv2PS79dnI9-nzb3ZVA?pwd=94a5), [RGB-NIR](https://pan.baidu.com/s/1P24HU1vDbDxcDZmM8b_ruA?pwd=ry6r), [PET-MRI], [CT-MRI] or create your training dataset.
 * Adjust `task1_model_path` in `main.py` to the path where you store the model in task #1.
