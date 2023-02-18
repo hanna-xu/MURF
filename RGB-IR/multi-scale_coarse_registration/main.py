@@ -12,7 +12,7 @@ from affine_model import Affine_Model
 
 data1_path = './unaligned_RGB_IR1.h5'
 data2_path = './unaligned_RGB_IR2.h5'
-task1_model_savepath = '../task1_shared_information_extraction/models/'
+task1_model_savepath = '../shared_information_extraction/models/'
 patch_size = 256
 EPOCHES = 200
 NUM=3
