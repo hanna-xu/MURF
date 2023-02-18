@@ -17,14 +17,15 @@
 ### To train:
 * Download the training data [RGB-IR](https://pan.baidu.com/s/1fgHRv2PS79dnI9-nzb3ZVA?pwd=94a5), [RGB-NIR](https://pan.baidu.com/s/1P24HU1vDbDxcDZmM8b_ruA?pwd=ry6r), [PET-MRI], [CT-MRI] or create your training dataset.
 * Adjust `task1_model_path` in `main.py` to the path where you store the model in task #1.
-* Run ```CUDA_VISIBLE_DEVICES=0,1 python main.py```
+* Run ```CUDA_VISIBLE_DEVICES=0,1 python main.py``` <br>
+##### In some tasks:
 * Put some training images of large spatial resolution in `./large_images_for_training/`
 * Finetune the trained model with images of original large spatial resolution by running ```CUDA_VISIBLE_DEVICES=0,1 python finetuning.py```
 ### To test:
 * Prepare test data (one of the two ways):
     * Put the test images in `./test_data/images/` ***or*** 
     * Put the test data (including images and **landmark**) in `./test_data/LM/` in `.mat` format <br> 
-* Run ```CUDA_VISIBLE_DEVICES=0 python test.py``` ***or*** run ```CUDA_VISIBLE_DEVICES=0,1 python test_w_finetuning.py``` 
+* Run ```CUDA_VISIBLE_DEVICES=0 python test.py``` ***or*** ```CUDA_VISIBLE_DEVICES=0,1 python test.py``` ***or*** ```CUDA_VISIBLE_DEVICES=0,1 python test_w_finetuning.py``` 
 
 ## Task #3: Fine registration and fusion
 ### To train:
