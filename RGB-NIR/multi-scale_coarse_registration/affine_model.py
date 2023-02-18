@@ -13,7 +13,7 @@ from skimage import img_as_ubyte
 from utils import *
 import sys
 sys.path.append("..")
-from task1_shared_information_extraction.des_extract_model import Des_Extract_Model
+from shared_information_extraction.des_extract_model import Des_Extract_Model
 
 WEIGHT_INIT_STDDEV = 0.05
 lambda_smooth = 0.01
