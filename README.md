@@ -26,8 +26,3 @@
 ## Task #3: Fine registration and fusion
 ### To train:
 ### To test:
-
-
-## Recommended Environment
-* tensorflow 1.14.0<br>
-* numpy 1.19.2
