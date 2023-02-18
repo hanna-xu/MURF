@@ -29,9 +29,7 @@ def main():
 		SOURCE2 = tf.compat.v1.summary.image('MRI', model.MRI, max_outputs=NUM)
 		des1 = tf.compat.v1.summary.image('des_PET', model.PET_des, max_outputs=NUM)
 		des2 = tf.compat.v1.summary.image('des_MRI', model.MRI_des, max_outputs=NUM)
-		similarities = tf.compat.v1.summary.image('similarities',
-												  tf.expand_dims(tf.expand_dims(model.similarities, axis=0), axis=-1),
-												  max_outputs=1)
+		similarities = tf.compat.v1.summary.image('similarities', tf.expand_dims(tf.expand_dims(model.similarities, axis=0), axis=-1), max_outputs=1)
 		merge_summary1 = tf.compat.v1.summary.merge([gloss, closs, SOURCE1, SOURCE2, des1, des2, similarities])
 
 		print('Begin to train the network...\n')
