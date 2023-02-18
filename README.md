@@ -29,3 +29,15 @@
 ## Task #3: Fine registration and fusion
 ### To train:
 ### To test:
+
+
+The previous version of this work:
+```
+@inproceedings{xu2022rfnet,
+  title={Rfnet: Unsupervised network for mutually reinforcing multi-modal image registration and fusion},
+  author={Xu, Han and Ma, Jiayi and Yuan, Jiteng and Le, Zhuliang and Liu, Wei},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={19679--19688},
+  year={2022}
+}
+```
