@@ -34,8 +34,9 @@
 
 ## Task #3: Fine registration and fusion
 ### To train:
-### To test:
 
+### To test:
+* Download the training data (same as that in Task #1 and the non-rigid deformation is applied subsequently)
 
 The previous version of this work:
 ```
