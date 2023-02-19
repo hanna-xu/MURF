@@ -19,7 +19,7 @@
 <div align=center><img src="https://github.com/hanna-xu/others/blob/master/images/MCRM_show.png" width="1100" height="345"/></div>
 <br>
 
-- [ ] **This task is based on task #1, so the code and models in task #1 should be downloaded and prepared in advance.**
+- [ ] **This task is based on Task #1, so the code and models in task #1 should be downloaded and prepared in advance.**
 
 ### To train:
 * Download the training data: [RGB-IR](https://pan.baidu.com/s/11-vMvbzLyR1FxnIi0jxGWg?pwd=8sih), [RGB-NIR](https://pan.baidu.com/s/1P24HU1vDbDxcDZmM8b_ruA?pwd=ry6r), [PET-MRI](https://pan.baidu.com/s/1ZlQCiDfnL36qqgq2p7XxoA?pwd=th6o), [CT-MRI](https://pan.baidu.com/s/1pYrf_GzGujFF-xW4QVA6xg?pwd=ik0k) or create your training dataset.
@@ -39,9 +39,10 @@
 
 ## Task #3: Fine registration and fusion
 ### To train:
-
-### To test:
 * Download the training data (same as that in Task #1 and the non-rigid deformation is applied subsequently)
+### To test:
+* Put the test data in `./test_imgs/`<br>
+* Run ```CUDA_VISIBLE_DEVICES=0 python test.py```<br>
 
 The previous version of this work:
 ```
