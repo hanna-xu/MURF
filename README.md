@@ -38,7 +38,7 @@
   * ```CUDA_VISIBLE_DEVICES=0,1 python test_w_finetuning.py``` 
 
 ## Task #3: Fine registration and fusion
-<div align=center><img src="https://github.com/hanna-xu/others/blob/master/images/F2M_show.png" width="700" height="380"/></div>
+<div align=center><img src="https://github.com/hanna-xu/others/blob/master/images/F2M_show.png" width="600" height="320"/></div>
 
 
 ### To train:
