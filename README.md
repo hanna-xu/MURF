@@ -8,7 +8,7 @@
    * [RGB-IR](https://pan.baidu.com/s/1MPSmWuOhKr2KQxD8aj5gHA?pwd=e9gf) (created with [*RoadScene*](https://github.com/hanna-xu/RoadScene) dataset)
    * [RGB-NIR](https://pan.baidu.com/s/1oakDnUKCtT0MaxjP-6Q0jA?pwd=epov) (created with [*VIS-NIR Scene*](http://matthewalunbrown.com/nirscene/nirscene.html) dataset)
    * [PET-MRI](https://pan.baidu.com/s/1BgX7lFbtZ4cunR7P160cnA?pwd=hu06) (created with [*Harvard*](http://www.med.harvard.edu/AANLIB/home.html) dataset) 
-   * [CT-MRI]() (created with [*Harvard*](http://www.med.harvard.edu/AANLIB/home.html) dataset) 
+   * [CT-MRI](https://pan.baidu.com/s/1WtVS8qO83tB8coy5TvJE8Q?pwd=rphq) (created with [*Harvard*](http://www.med.harvard.edu/AANLIB/home.html) dataset) 
    * or create your training dataset according to [it](https://github.com/hanna-xu/utils)<br>
 * Run ```CUDA_VISIBLE_DEVICES=0 python main.py```
 ### To test:
@@ -20,7 +20,7 @@
 
 
 ### To train:
-* Download the training data: [RGB-IR](https://pan.baidu.com/s/11-vMvbzLyR1FxnIi0jxGWg?pwd=8sih), [RGB-NIR](https://pan.baidu.com/s/1P24HU1vDbDxcDZmM8b_ruA?pwd=ry6r), [PET-MRI](https://pan.baidu.com/s/1ZlQCiDfnL36qqgq2p7XxoA?pwd=th6o), [CT-MRI] or create your training dataset.
+* Download the training data: [RGB-IR](https://pan.baidu.com/s/11-vMvbzLyR1FxnIi0jxGWg?pwd=8sih), [RGB-NIR](https://pan.baidu.com/s/1P24HU1vDbDxcDZmM8b_ruA?pwd=ry6r), [PET-MRI](https://pan.baidu.com/s/1ZlQCiDfnL36qqgq2p7XxoA?pwd=th6o), [CT-MRI](https://pan.baidu.com/s/1pYrf_GzGujFF-xW4QVA6xg?pwd=ik0k) or create your training dataset.
 * Adjust `task1_model_path` in `main.py` to the path where you store the model in task #1.
 * Run ```CUDA_VISIBLE_DEVICES=0,1 python main.py``` <br>
 ##### In some tasks:
