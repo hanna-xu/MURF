@@ -17,7 +17,9 @@
 
 ## Task #2: Multi-scale coarse registration
 <div align=center><img src="https://github.com/hanna-xu/others/blob/master/images/MCRM_show.png" width="1100" height="345"/></div>
+<br>
 
+- [ ] **This task is based on task #1, so the code and models in task #1 should be downloaded and prepared in advance.**
 
 ### To train:
 * Download the training data: [RGB-IR](https://pan.baidu.com/s/11-vMvbzLyR1FxnIi0jxGWg?pwd=8sih), [RGB-NIR](https://pan.baidu.com/s/1P24HU1vDbDxcDZmM8b_ruA?pwd=ry6r), [PET-MRI](https://pan.baidu.com/s/1ZlQCiDfnL36qqgq2p7XxoA?pwd=th6o), [CT-MRI](https://pan.baidu.com/s/1pYrf_GzGujFF-xW4QVA6xg?pwd=ik0k) or create your training dataset.
@@ -25,12 +27,15 @@
 * Run ```CUDA_VISIBLE_DEVICES=0,1 python main.py``` <br>
 ##### In some tasks:
 * Put some training images of large spatial resolution in `./large_images_for_training/`
-* Finetune the trained model with images of original large spatial resolution by running ```CUDA_VISIBLE_DEVICES=0,1 python finetuning.py```
+* Finetune the trained model with large-resolution images by running ```CUDA_VISIBLE_DEVICES=0,1 python finetuning.py```
 ### To test:
 * Prepare test data (one of the two ways):
     * Put the test images in `./test_data/images/` ***or*** 
     * Put the test data (including images and **landmark**) in `./test_data/LM/` in `.mat` format <br> 
-* Run ```CUDA_VISIBLE_DEVICES=0 python test.py``` ***or*** ```CUDA_VISIBLE_DEVICES=0,1 python test.py``` ***or*** ```CUDA_VISIBLE_DEVICES=0,1 python test_w_finetuning.py``` 
+* Run the testing code:
+  * ```CUDA_VISIBLE_DEVICES=0 python test.py``` ***or*** 
+  * ```CUDA_VISIBLE_DEVICES=0,1 python test.py``` ***or*** 
+  * ```CUDA_VISIBLE_DEVICES=0,1 python test_w_finetuning.py``` 
 
 ## Task #3: Fine registration and fusion
 ### To train:
