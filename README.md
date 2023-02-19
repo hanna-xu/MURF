@@ -38,6 +38,9 @@
   * ```CUDA_VISIBLE_DEVICES=0,1 python test_w_finetuning.py``` 
 
 ## Task #3: Fine registration and fusion
+<div align=center><img src="https://github.com/hanna-xu/others/blob/master/images/F2M_show.png" width="700" height="380"/></div>
+
+
 ### To train:
 * Download the training data (same as that in Task #1 and the non-rigid deformation is applied subsequently)
 * Run ```CUDA_VISIBLE_DEVICES=0 python main.py```
