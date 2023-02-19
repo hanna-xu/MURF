@@ -32,7 +32,7 @@
 * Prepare test data (one of the two ways):
     * Put the test images in `./test_data/images/` ***or*** 
     * Put the test data (including images and **landmark**) in `./test_data/LM/` in `.mat` format <br> 
-* Run the testing code:
+* Run test code:
   * ```CUDA_VISIBLE_DEVICES=0 python test.py``` ***or*** 
   * ```CUDA_VISIBLE_DEVICES=0,1 python test.py``` ***or*** 
   * ```CUDA_VISIBLE_DEVICES=0,1 python test_w_finetuning.py``` 
