@@ -16,7 +16,7 @@
 * Run ```CUDA_VISIBLE_DEVICES=0 python test.py```<br>
 
 ## Task #2: Multi-scale coarse registration
-<div align=center><img src="https://github.com/hanna-xu/others/blob/master/images/MCRM_show.png" width="1100" height="345"/></div>
+<div align=center><img src="https://github.com/hanna-xu/others/blob/master/images/MCRM_show.png" width="1150" height="345"/></div>
 <br>
 
 - [ ] **This task is based on Task #1, so the code and models in task #1 should be downloaded and prepared in advance.**
