@@ -40,7 +40,7 @@ def main():
 				var_list_f2m_fuse.append(var)
 
 		saver = tf.compat.v1.train.Saver(var_list=var_list_f2m)
-		'''only for fuse/fuse aligned images'''
+		'''only for fusing aligned images'''
 		# saver = tf.compat.v1.train.Saver(var_list=var_list_f2m_fuse)
 
 		global_vars = tf.compat.v1.global_variables()
