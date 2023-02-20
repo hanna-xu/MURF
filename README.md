@@ -26,7 +26,7 @@
 * Adjust `task1_model_path` in `main.py` to the path where you store the model in task #1.
 * Run ```CUDA_VISIBLE_DEVICES=0,1 python main.py``` <br>
 ##### In some tasks:
-* Put some training images of large spatial resolution in `./large_images_for_training/`
+* Put more large-resolution training images in `./large_images_for_training/`
 * Finetune the trained model with large-resolution images by running ```CUDA_VISIBLE_DEVICES=0,1 python finetuning.py```
 ### To test:
 * Prepare test data (one of the two ways):
@@ -44,7 +44,7 @@
 * Download the training data (same as that in Task #1 and the non-rigid deformation is applied subsequently)
 * Run ```CUDA_VISIBLE_DEVICES=0 python main.py```
 ##### In some tasks:
-* Put some training images of large spatial resolution in `./large_images_for_training/`
+* Put more large-resolution training images in `./large_images_for_training/`
 * Finetune the trained model with large-resolution images by running ```CUDA_VISIBLE_DEVICES=0 python finetuning.py```
 ### To test:
 * Put the test data in `./test_imgs/`<br>
