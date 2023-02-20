@@ -52,7 +52,7 @@ def train_f2m(model, sess, trainset, merged1=None, writer=None, saver=None, save
 	model.offset_solver = tf.compat.v1.train.AdamOptimizer(learning_rate=model.lr, beta1=0.5, beta2=0.99).minimize(model.offset_loss,
 																						var_list=var_list_f2m_offset)
 	initialize_uninitialized(sess)
-	could_load, checkpoint_counter = load(sess=sess, saver=tf.compat.v1.train.Saver(var_list = var_list_f2m), checkpoint_dir='./models/')
+	could_load, checkpoint_counter = load(sess=sess, saver=tf.compat.v1.train.Saver(var_list = var_list_f2m), checkpoint_dir=save_path)
 
 	if could_load:
 		start_epoch = (int)(checkpoint_counter / n_batches)
