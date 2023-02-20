@@ -40,10 +40,12 @@
 ## Task #3: Fine registration and fusion
 <div align=center><img src="https://github.com/hanna-xu/others/blob/master/images/F2M_show.png" width="600" height="320"/></div>
 
-
 ### To train:
 * Download the training data (same as that in Task #1 and the non-rigid deformation is applied subsequently)
 * Run ```CUDA_VISIBLE_DEVICES=0 python main.py```
+##### In some tasks:
+* Put some training images of large spatial resolution in `./large_images_for_training/`
+* Finetune the trained model with large-resolution images by running ```CUDA_VISIBLE_DEVICES=0 python finetuning.py```
 ### To test:
 * Put the test data in `./test_imgs/`<br>
 * Run ```CUDA_VISIBLE_DEVICES=0 python test.py```<br>
