@@ -45,9 +45,12 @@ def main():
 		bn_moving_vars += [g for g in g_list if 'moving_variance' in g.name]
 		var_list_f2m += bn_moving_vars
 		var_list_bn = list()
+		var_list_f2m_fuse = list()
 		for i in var_list_f2m:
 			if "BatchNorm" in i.name:
 				var_list_bn.append(i)
+			if "offset" not in i.name:
+				var_list_f2m_fuse.append(i)
 
 		saver = tf.compat.v1.train.Saver(var_list=var_list_f2m)
 		'''only for fusing aligned images'''
