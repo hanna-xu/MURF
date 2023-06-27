@@ -50,6 +50,8 @@
 * Put the test data in `./test_imgs/`<br>
 * Run ```CUDA_VISIBLE_DEVICES=0 python test.py```<br>
 
+This work has been accepted by IEEE Transactions on Pattern Analysis and Machine Intelligence, 2023.
+
 The previous version of this work:
 ```
 @inproceedings{xu2022rfnet,
