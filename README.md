@@ -1,4 +1,14 @@
 # MURF
+Code of the following work:
+```
+@article{xu2023murf,
+  title={MURF: Mutually Reinforcing Multi-modal Image Registration and Fusion},
+  author={Xu, Han and Yuan, Jiteng and Ma, Jiayi},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2023},
+  publisher={IEEE}
+}
+```
 
 ## **Task #1: Shared information extraction**
 <div align=center><img src="https://github.com/hanna-xu/others/blob/master/images/MURF_task1_show.png" width="950" height="330"/></div>
@@ -49,8 +59,6 @@
 ### To test:
 * Put the test data in `./test_imgs/`<br>
 * Run ```CUDA_VISIBLE_DEVICES=0 python test.py```<br>
-
-This work has been accepted by IEEE Transactions on Pattern Analysis and Machine Intelligence, 2023.
 
 The previous version of this work:
 ```
