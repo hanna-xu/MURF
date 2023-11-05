@@ -624,3 +624,11 @@ def SD(x):
 	mu = tf.reshape(tf.reduce_mean(x, axis=[1, 2, 3]), [b, 1, 1, 1])
 	mu = tf.tile(mu, [1, h, w, c])
 	return tf.reduce_mean(tf.sqrt(tf.reduce_mean(tf.square(x-mu), axis=[1, 2, 3])))
+
+
+def save_pic(outputpic, filename):
+	outputpic[outputpic > 1.] = 1
+	outputpic[outputpic < 0.] = 0
+	outputpic = cv2.UMat(outputpic).get()
+	outputpic = cv2.normalize(outputpic, None, 0, 255, cv2.NORM_MINMAX, cv2.CV_32F)
+	cv2.imwrite(filename, outputpic)
