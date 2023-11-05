@@ -90,8 +90,8 @@ def main():
 			fused_img = sess.run(f2m_model.fused_img, feed_dict=FEED_DICT)
 			fused_img = scipy.misc.imresize(fused_img[0, :, :, :], (rgb_dimension[0], rgb_dimension[1])).astype(
 				np.float32) / 255.0
-			# scipy.misc.imsave(save_path + 'fused_img/' + name + '.jpg', fused_img)
-			save_pic(fused_img, save_path + 'fused_img/' + name + '.png')
+			scipy.misc.imsave(save_path + 'fused_img/' + name + '.jpg', fused_img)
+			# save_pic(fused_img, save_path + 'fused_img/' + name + '.png')
 
 			time = datetime.now() - start_time
 			time=time.total_seconds()
