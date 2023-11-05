@@ -75,7 +75,8 @@ def main():
 			fused_img = scipy.misc.imresize(fused_img[0, :, :, :], (rgb_dimension[0], rgb_dimension[1])).astype(np.float32) / 255.0
 			if not os.path.exists(save_path + 'fused_img/'):
 				os.mkdir(save_path + 'fused_img/')
-			scipy.misc.imsave(save_path + 'fused_img/' + name + '.png', fused_img)
+			# scipy.misc.imsave(save_path + 'fused_img/' + name + '.png', fused_img)
+			save_pic(fused_img, save_path + 'fused_img/' + name + '.png')
 
 			time = datetime.now() - start_time
 			time=time.total_seconds()
@@ -84,11 +85,6 @@ def main():
 				T.append(time)
 				print("\nElapsed_time: %s" % (T[pic_num-2]))
 
-			fused_ori = (rgb_img/255.0 + np.tile(np.expand_dims(nir_img/255.0, axis=-1), [1, 1, 3]))/2
-			compare = np.concatenate([fused_ori, fused_img], axis = 1)
-			if not os.path.exists(save_path + 'compare/'):
-				os.mkdir(save_path + 'compare/')
-			scipy.misc.imsave(save_path + 'compare/' + name + '.png', compare)
 
 		print("Time mean :%s, std: %s\n" % (np.mean(T), np.std(T)))
 
