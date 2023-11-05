@@ -75,8 +75,7 @@ def main():
 			fused_img = scipy.misc.imresize(fused_img[0, :, :, :], (rgb_dimension[0], rgb_dimension[1])).astype(np.float32) / 255.0
 			if not os.path.exists(save_path + 'fused_img/'):
 				os.mkdir(save_path + 'fused_img/')
-			# scipy.misc.imsave(save_path + 'fused_img/' + name + '.png', fused_img)
-			save_pic(fused_img, save_path + 'fused_img/' + name + '.png')
+			scipy.misc.imsave(save_path + 'fused_img/' + name + '.png', fused_img)
 
 			time = datetime.now() - start_time
 			time=time.total_seconds()
