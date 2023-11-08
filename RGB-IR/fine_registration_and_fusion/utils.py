@@ -457,6 +457,10 @@ def rgb2y_np(img_rgb):
 	Y = 0.299 * R + 0.587 * G + 0.114 * B
 	return Y
 
+def eh(image):
+	mean=tf.reduce_mean(image)
+	result = tf.image.adjust_contrast(image, tf.abs(mean-0.5)*5+1)
+	return result
 
 def affinity(F):
 	batchsize = F.shape[0]
