@@ -83,7 +83,7 @@ class F2M_Model(object):
 			drgb_offset_cb = drgb_offset_ycbcr[0: self.batchsize, :, :, 1:2]
 			drgb_offset_cr = drgb_offset_ycbcr[0: self.batchsize, :, :, 2:3]
 
-			self.fused_img = ycbcr2rgb(tf.concat([self.fimg_y, drgb_offset_cb, drgb_offset_cr], axis=-1))
+			self.fused_img = ycbcr2rgb(tf.concat([eh(self.fimg_y), drgb_offset_cb, drgb_offset_cr], axis=-1))
 
 			if self.is_training:
 				dr_defor_gt, _, _, _ = grid_sample(self.dRGB[0:self.batchsize, :, :, 0:1],
