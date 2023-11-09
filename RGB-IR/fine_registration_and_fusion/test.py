@@ -62,8 +62,9 @@ def main():
 
 		for file in files:
 			pic_num += 1
-			name = file.split('/')[-1]
-			name = name.split('.')[-2]
+			names = file.split('/')[-1]
+			name = names.split('.')[-2]
+			format = names.split('.')[-1]
 			print("\033[0;33;40m["+ str(pic_num) + "/" + str(len(files)) +"]: "+ name + ".png" + "\033[0m")
 			rgb_img = scipy.misc.imread(test_path1 + file.split('/')[-1])
 			ir_img = scipy.misc.imread(test_path2 + file.split('/')[-1])
@@ -90,8 +91,7 @@ def main():
 			fused_img = sess.run(f2m_model.fused_img, feed_dict=FEED_DICT)
 			fused_img = scipy.misc.imresize(fused_img[0, :, :, :], (rgb_dimension[0], rgb_dimension[1])).astype(
 				np.float32) / 255.0
-			scipy.misc.imsave(save_path + 'fused_img/' + name + '.jpg', fused_img)
-			# save_pic(fused_img, save_path + 'fused_img/' + name + '.png')
+			scipy.misc.imsave(save_path + 'fused_img/' + name + '.' + format, fused_img)
 
 			time = datetime.now() - start_time
 			time=time.total_seconds()
