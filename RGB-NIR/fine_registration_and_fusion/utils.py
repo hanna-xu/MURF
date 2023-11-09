@@ -625,6 +625,12 @@ def SD(x):
 	mu = tf.tile(mu, [1, h, w, c])
 	return tf.reduce_mean(tf.sqrt(tf.reduce_mean(tf.square(x-mu), axis=[1, 2, 3])))
 
+def eh(image):
+	vary = tf.reduce_max(image) - tf.reduce_min(image)
+	tot = tf.reduce_max(image) + tf.reduce_min(image)
+	con_i = vary/(tot+1e-6)
+	result = tf.image.adjust_contrast(image, (1-con_i)*10+1)
+	return result
 
 def save_pic(outputpic, filename):
 	outputpic[outputpic > 1.] = 1
