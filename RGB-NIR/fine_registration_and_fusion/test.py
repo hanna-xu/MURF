@@ -14,7 +14,7 @@ import cv2
 from datetime import datetime
 import scipy.io as scio
 
-N = 1024
+N = 1024 # set it according to the resolution of source images, e.g., if the source image is of size 1240x1080, N can be set as 1240
 def main():
 	test_path1 = './test_imgs/RGB/'
 	test_path2 = './test_imgs/NIR/'
@@ -49,8 +49,9 @@ def main():
 
 		for file in files:
 			pic_num += 1
-			name = file.split('/')[-1]
-			name = name.split('.')[-2]
+			names = file.split('/')[-1]
+			name = names.split('.')[-2]
+			format = names.split('.')[-1]
 			print("\033[0;33;40m["+ str(pic_num) + "/" + str(len(files)) +"]: "+ name + ".png" + "\033[0m")
 
 			rgb_img = scipy.misc.imread(test_path1 + file.split('/')[-1])
@@ -75,7 +76,7 @@ def main():
 			fused_img = scipy.misc.imresize(fused_img[0, :, :, :], (rgb_dimension[0], rgb_dimension[1])).astype(np.float32) / 255.0
 			if not os.path.exists(save_path + 'fused_img/'):
 				os.mkdir(save_path + 'fused_img/')
-			scipy.misc.imsave(save_path + 'fused_img/' + name + '.png', fused_img)
+			scipy.misc.imsave(save_path + 'fused_img/' + name + '.' + format, fused_img)
 
 			time = datetime.now() - start_time
 			time=time.total_seconds()
