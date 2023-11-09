@@ -458,8 +458,10 @@ def rgb2y_np(img_rgb):
 	return Y
 
 def eh(image):
-	mean=tf.reduce_mean(image)
-	result = tf.image.adjust_contrast(image, tf.abs(mean-0.5)*5+1)
+	vary = tf.reduce_max(image) - tf.reduce_min(image)
+	tot = tf.reduce_max(image) + tf.reduce_min(image)
+	con_i = vary/(tot+1e-6)
+	result = tf.image.adjust_contrast(image, (1-con_i)*10+1)
 	return result
 
 def affinity(F):
