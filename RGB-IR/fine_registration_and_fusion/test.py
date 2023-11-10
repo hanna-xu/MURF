@@ -14,7 +14,7 @@ import cv2
 from datetime import datetime
 import scipy.io as scio
 
-N = 512 # set it according to the resolution of source images, e.g., if the source image is of size 1240x1080, N can be set as 1240
+N = 1240 # set it according to the resolution of source images, e.g., if the source image is of size 1240x1080, N can be set as 1240
 def main():
 	test_path1 = './test_imgs/RGB/'
 	test_path2 = './test_imgs/IR/'
