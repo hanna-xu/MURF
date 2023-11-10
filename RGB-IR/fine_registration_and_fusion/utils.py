@@ -461,7 +461,8 @@ def eh(image):
 	vary = tf.reduce_max(image) - tf.reduce_min(image)
 	tot = tf.reduce_max(image) + tf.reduce_min(image)
 	con_i = vary/(tot+1e-6)
-	result = tf.image.adjust_contrast(image, (1-con_i)*20+1)
+	result = tf.image.adjust_contrast(image, (1-con_i)*10+1.5)
+	result = tf.clip_by_value(result, 0, tf.reduce_max(result))
 	return result
 
 def affinity(F):
