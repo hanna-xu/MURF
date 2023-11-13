@@ -88,7 +88,7 @@ def main():
 			FEED_DICT = {SOURCE_RGB: rgb_img_N, SOURCE_IR: ir_img_N, DEFOR_FIELD: defor_field,
 						 RE_DEFOR_FIELD_GT: defor_re}
 
-			fused_img_out = sess.run(f2m_model.fused_img, feed_dict=FEED_DICT)
+			fused_img_out = sess.run(f2m_model.fused_img[0, :,:,:], feed_dict=FEED_DICT)
 			fused_img_ori_size = cv2.resize(fused_img_out,(rgb_dimension[1], rgb_dimension[0]))
 			scipy.misc.toimage(fused_img_ori_size, cmin=0.0, cmax=np.max(fused_img_ori_size)).save(save_path + 'fused_img/' + name + '.'+format)
 
