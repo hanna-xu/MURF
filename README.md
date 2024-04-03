@@ -10,6 +10,12 @@ Code of the following work:
 }
 ```
 
+## Recommended Environment:
+python=3.6<br>
+tensorflow-gpu=1.14.0<br>
+numpy=1.19<br>
+scikit-image=0.17.2<br>
+
 ## **Task #1: Shared information extraction**
 <div align=center><img src="https://github.com/hanna-xu/others/blob/master/images/MURF_task1_show.png" width="950" height="330"/></div>
 
