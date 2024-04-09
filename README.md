@@ -1,14 +1,5 @@
 # MURF
-Code of the following work:
-```
-@article{xu2023murf,
-  title={MURF: Mutually Reinforcing Multi-modal Image Registration and Fusion},
-  author={Xu, Han and Yuan, Jiteng and Ma, Jiayi},
-  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  year={2023},
-  publisher={IEEE}
-}
-```
+Code for "MURF: Mutually Reinforcing Multi-modal Image Registration and Fusion" (IEEE TPAMI 2023).
 
 ## Recommended Environment:
 python=3.6<br>
